@@ -1,10 +1,10 @@
-AFRAME.registerComponent("comic", {
+AFRAME.registerComponent("tour", {
   init: function () {
     this.placesContainer = this.el;   
     this.createCards();
   },
 
-  createCards: function () {
+   createCards: function () {
     const thumbNailsRef = [
       {
         id: "iron-man",
@@ -57,9 +57,9 @@ AFRAME.registerComponent("comic", {
     entityEl.setAttribute("id", id);
     entityEl.setAttribute("visible", true);
     entityEl.setAttribute("geometry", {
-      primitive: "box",
-      length: 8,
-      width: 6,
+      primitive: "plane",
+      height: 28,
+      width: 20,
     });
     entityEl.setAttribute("position", position);
     entityEl.setAttribute("material", {
@@ -73,8 +73,8 @@ AFRAME.registerComponent("comic", {
     const entityEl = document.createElement("a-entity");
     entityEl.setAttribute("visible", true);
     entityEl.setAttribute("geometry", {
-      primitive: "box",
-      length:5,
+      primitive: "circle",
+      radius: 9,
     });
     entityEl.setAttribute("material", { src: item.url });
 
