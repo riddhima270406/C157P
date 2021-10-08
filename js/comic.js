@@ -61,22 +61,12 @@ AFRAME.registerComponent("tour", {
       height: 20,
       width: 18
     });
-    entityEl.setAttribute("position", { });
+    entityEl.setAttribute("position", { x: 0, y: 5, z: 0.1});
     entityEl.setAttribute("material", { src: item.url });
 
     return entityEl;
   },
-  createThumbNail: function (item) {
-    const entityEl = document.createElement("a-entity");
-    entityEl.setAttribute("visible", true);
-    entityEl.setAttribute("geometry", {
-      primitive: "plane",
-  
-    });
     
-
-    return entityEl;
-  },
   createTitleEl: function (position, item) {
     const entityEl = document.createElement("a-entity");
     entityEl.setAttribute("text", {
