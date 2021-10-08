@@ -9,23 +9,23 @@ AFRAME.registerComponent("comic", {
       {
         id: "iron-man",
         title: "Iron Man",
-        url: "./thumbNails/iron-man.jpg",
+        url: "./thumbNails/iron-man.png",
       },
        {
         id: "black-widow",
         title: "Black Widow",
-        url: "./thumbNails/black-widow.jpg",
+        url: "./thumbNails/black-widow.png",
       },
 
        {
         id: "spider-man",
         title: "Spider Man",
-        url: "./thumbNails/spider-man.jpg",
+        url: "./thumbNails/spider-man.png",
       },
        {
         id: "loki",
         title: "Loki",
-        url: "./thumbNails/loki.jpg",
+        url: "./thumbNails/loki.png",
       },
     ];
     
@@ -58,6 +58,8 @@ AFRAME.registerComponent("comic", {
     entityEl.setAttribute("visible", true);
     entityEl.setAttribute("geometry", {
       primitive: "box",
+      length: 8,
+      width: 6,
     });
     entityEl.setAttribute("position", position);
     entityEl.setAttribute("material", {
@@ -72,6 +74,7 @@ AFRAME.registerComponent("comic", {
     entityEl.setAttribute("visible", true);
     entityEl.setAttribute("geometry", {
       primitive: "box",
+      length:5,
     });
     entityEl.setAttribute("material", { src: item.url });
 
