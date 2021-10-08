@@ -59,24 +59,15 @@ AFRAME.registerComponent("tour", {
     entityEl.setAttribute("geometry", {
       primitive: "plane",
       height: 28,
-      width: 20,
+      width: 20
     });
-    entityEl.setAttribute("position", position);
-    entityEl.setAttribute("material", {
-      color: "#0077CC",
-      opacity: 1,
-    });
+    
+    entityEl.setAttribute("position", {x: 0, y: 5, z: 0.1});
+    entityEl.setAttribute("material", { src: item.url });
+    }
 
     return entityEl;
-  },
-  createThumbNail: function (item) {
-    const entityEl = document.createElement("a-entity");
-    entityEl.setAttribute("visible", true);
-    entityEl.setAttribute("geometry", {
-      primitive: "circle",
-      radius: 9,
-    });
-    entityEl.setAttribute("material", { src: item.url });
+    
 
     return entityEl;
   },
